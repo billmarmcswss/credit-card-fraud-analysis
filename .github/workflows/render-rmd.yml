@@ -20,9 +20,9 @@ jobs:
             libgdal-dev libgeos-dev libproj-dev libudunits2-dev
 
       # --- HERE is the new step! ---
-      - name: Diagnostic usmapdata install
+      - name: Install the 'here' package
         run: |
-          Rscript -e 'install.packages("usmapdata", dependencies=TRUE, repos="https://cloud.r-project.org")'
+          Rscript -e 'install.packages("here", dependencies=TRUE, repos="https://cloud.r-project.org")'
 
       # The rest of your steps go here...
       - name: Install packages
@@ -41,3 +41,10 @@ jobs:
       - name: Render Rmd
         run: |
           Rscript -e 'rmarkdown::render("analysis/Capstone_Report.Rmd", quiet = FALSE)'
+
+      # Optionally, upload the output
+      - name: Upload rendered report
+        uses: actions/upload-artifact@v2
+        with:
+          name: rendered-report
+          path: analysis/Capstone_Report.html
