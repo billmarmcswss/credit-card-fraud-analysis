@@ -47,7 +47,7 @@ jobs:
 
       # Upload rendered report as an artifact (updated to use v3)
       - name: Upload rendered report
-        uses: actions/upload-artifact@v3  # This was correct
+        uses: actions/upload-artifact@v2  # This was correct
         with:
           name: rendered-report
           path: analysis/Capstone_Report.html
