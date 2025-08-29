@@ -44,7 +44,7 @@ jobs:
 
       # Optionally, upload the output
       - name: Upload rendered report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: rendered-report
           path: analysis/Capstone_Report.html
