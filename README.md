@@ -87,6 +87,16 @@ Developed a transferable analytical framework for ongoing fraud risk assessment 
 ## Questions or Feedback?
 Feel free to open an issue or contact me via [LinkedIn](https://www.linkedin.com/in/william-matthews-65a071232/) with questions, feedback, or collaboration requests.
 
+## Live Demo
+View on Kaggle: https://www.kaggle.com/code/williamjmatthews/us-credit-card-fraud-geo-merchant-risk
+
+Or:
+
+[Interactive Analysis] https://www.kaggle.com/code/williamjmatthews/us-credit-card-fraud-geo-merchant-risk
+Or:
+
+**Kaggle Demo**: https://www.kaggle.com/code/williamjmatthews/us-credit-card-fraud-geo-merchant-risk
+
 
 
 
