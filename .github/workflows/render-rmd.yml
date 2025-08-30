@@ -20,10 +20,10 @@ jobs:
             libcurl4-openssl-dev libssl-dev libxml2-dev \
             libgdal-dev libgeos-dev libproj-dev libudunits2-dev
 
-      # Install usmapdata (diagnostic)
-      - name: Diagnostic usmapdata install
+      # --- Install the 'here' package to avoid library error ---
+      - name: Install 'here' package
         run: |
-          Rscript -e 'install.packages("usmapdata", dependencies=TRUE, repos="https://cloud.r-project.org")'
+          Rscript -e 'install.packages("here", repos="https://cloud.r-project.org")'
 
       # Install necessary R packages
       - name: Install packages
@@ -45,4 +45,9 @@ jobs:
         run: |
           Rscript -e 'rmarkdown::render("analysis/Capstone_Report.Rmd", quiet = FALSE)'
 
-      # Upload rendered report as an arti
+      # Upload rendered report as an artifact
+      - name: Upload rendered report
+        uses: actions/upload-artifact@v2
+        with:
+          name: rendered-report
+          path: analysis/Capstone_Report.html
