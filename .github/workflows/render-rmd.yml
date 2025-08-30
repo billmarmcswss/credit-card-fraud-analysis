@@ -47,7 +47,7 @@ jobs:
 
       # Upload rendered report as an artifact
       - name: Upload rendered report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: rendered-report
           path: analysis/Capstone_Report.html
